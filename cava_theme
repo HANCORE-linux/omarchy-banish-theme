@@ -1,0 +1,14 @@
+# Banished — Cava colors, using the existing Sigil UV Aqua palette.
+# Load directly with: cava -p ~/.config/omarchy/themes/banish/cava_theme
+
+[color]
+background = '#0c0b0d'
+foreground = '#ff2fb3'
+gradient = 1
+gradient_count = 6
+gradient_color_1 = '#6C70E0'
+gradient_color_2 = '#bd5cff'
+gradient_color_3 = '#b985ff'
+gradient_color_4 = '#ff2fb3'
+gradient_color_5 = '#ff6f93'
+gradient_color_6 = '#E0E1E4'

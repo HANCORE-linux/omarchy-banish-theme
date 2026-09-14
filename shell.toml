@@ -1,0 +1,144 @@
+# Banished — shell surfaces and borders.
+# Window border size and corner radius are set in hyprland.lua.
+# Palette values copied from the existing active theme.
+
+[bar]
+background       = "#0c0b0d"
+background-alpha = 1.0
+text             = "#e4e2e6"
+active           = "#ff4a78"
+scale-with-font  = true
+size-horizontal  = 26
+size-vertical    = 28
+
+[hyprland]
+active-border-width = 1
+active-border            = "rgba(e4e4e4b3)"
+active-border-foreground = "rgba(e4e4e4b3)"
+
+[controls]
+
+normal-color        = "#e4e2e6"
+normal-fill-alpha   = 0.04
+normal-border       = "#e4e2e6"
+normal-border-width = 1
+normal-border-alpha = 0.4
+
+hover-cursor-color        = "#e4e2e6"
+hover-cursor-fill-alpha   = 0.08
+hover-cursor-border       = "#e4e2e6"
+hover-cursor-border-width = 1
+hover-cursor-border-alpha = 0.25
+
+focus-color        = "#e4e2e6"
+focus-fill-alpha   = 0.08
+focus-border       = "#e4e2e6"
+focus-border-width = 1
+focus-border-alpha = 0.25
+
+selected-color        = "#e4e2e6"
+selected-fill-alpha   = 0.18
+selected-border       = "#e4e2e6"
+selected-border-width = 0
+selected-border-alpha = 1.0
+
+pressed-fill-alpha   = 0.22
+selection-fill-alpha = 0.35
+
+[spacing]
+scale = 1.0
+scale-with-font = true
+
+[font]
+base-size = 12
+
+[popups]
+border-width = 1
+background       = "#0c0b0d"
+background-alpha = 1.0
+text             = "#e4e2e6"
+border           = "hyprland.active-border"
+border-alpha     = 1.0
+
+[tooltip]
+border-width = 1
+background       = "#0c0b0d"
+background-alpha = 0.97
+text             = "#e4e2e6"
+border           = "hyprland.active-border-foreground"
+border-alpha     = 1.0
+
+[notifications]
+border-width = 1
+background       = "#0c0b0d"
+background-alpha = 1.0
+text             = "#e4e2e6"
+border           = "hyprland.active-border"
+border-alpha     = 1.0
+countdown        = "#ff2fb3"
+
+[launcher]
+border-width = 1
+background                = "#0c0b0d"
+background-alpha          = 0.95
+text                      = "#e4e2e6"
+border                    = "hyprland.active-border-foreground"
+border-alpha              = 1.0
+scrim                     = "#0c0b0d"
+scrim-alpha               = 0.5
+selected-background       = "#e4e2e6"
+selected-background-alpha = 0.08
+selected-text             = "#ff2fb3"
+selected-border           = "hyprland.active-border-foreground"
+selected-border-alpha     = 0.25
+
+[menu]
+border-width = 1
+background                = "#0c0b0d"
+background-alpha          = 1.0
+text                      = "#e4e2e6"
+border                    = "hyprland.active-border-foreground"
+border-alpha              = 1.0
+scrim                     = "#0c0b0d"
+scrim-alpha               = 0.5
+selected-background       = "#e4e2e6"
+selected-background-alpha = 0.08
+selected-text             = "#ff2fb3"
+selected-border           = "hyprland.active-border-foreground"
+selected-border-alpha     = 0.25
+
+[polkit]
+border-width = 1
+background       = "#0c0b0d"
+background-alpha = 1.0
+text             = "#e4e2e6"
+text-error       = "#ff4a78"
+border           = "hyprland.active-border"
+border-error     = "#ff4a78"
+border-alpha     = 1.0
+scrim            = "#0c0b0d"
+scrim-alpha      = 0.5
+accent           = "#ff2fb3"
+
+[lock]
+border-width = 1
+background       = "#0c0b0d"
+background-alpha = 0.8
+text             = "#e4e2e6"
+placeholder      = "#9b999c"
+text-error       = "#ff4a78"
+border           = "hyprland.active-border"
+border-active    = "hyprland.active-border"
+border-error     = "#ff4a78"
+border-alpha     = 1.0
+selection        = "#ff2fb3"
+selection-alpha  = 0.45
+
+[image-picker]
+scrim                   = "#0c0b0d"
+scrim-alpha             = 0.5
+text                    = "#e4e2e6"
+selected-border         = "#ff2fb3"
+selected-border-alpha   = 1.0
+unselected-border       = "#e4e2e6"
+unselected-border-alpha = 0.28
