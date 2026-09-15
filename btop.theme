@@ -11,13 +11,13 @@ theme[title]="#E0E1E4"
 theme[hi_fg]="#ff2fb3"
 
 # Background color of selected item in processes box
-theme[selected_bg]="#271c2b"
+theme[selected_bg]="#33ffe6"
 
 # Foreground color of selected item in processes box
-theme[selected_fg]="#ff2fb3"
+theme[selected_fg]="#0c0b0d"
 
 # Color of inactive/disabled text
-theme[inactive_fg]="#7a777d"
+theme[inactive_fg]="#7d8581"
 
 # Color of text appearing on top of graphs, i.e uptime and current network graph scaling
 theme[graph_text]="#a9a6ab"
@@ -35,7 +35,7 @@ theme[net_box]="#ff4a78"
 theme[proc_box]="#b985ff"
 
 # Box divider line and small boxes line color
-theme[div_line]="#7a777d"
+theme[div_line]="#7d8581"
 
 # Temperature graph color (Green -> Yellow -> Red)
 theme[temp_start]="#6C70E0"
@@ -85,8 +85,8 @@ theme[process_end]="#ff2fb3"
 # Graph gradient colors (spectrum shades from background to foreground)
 theme[gradient_color_0]="#0c0b0d"
 theme[gradient_color_1]="#19181a"
-theme[gradient_color_2]="#271c2b"
-theme[gradient_color_3]="#7a777d"
+theme[gradient_color_2]="#1b3934"
+theme[gradient_color_3]="#7d8581"
 theme[gradient_color_4]="#a9a6ab"
 theme[gradient_color_5]="#D8D1CC"
 theme[gradient_color_6]="#E0E1E4"

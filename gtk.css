@@ -1,5 +1,6 @@
     @define-color background     #0c0b0d;
     @define-color foreground     #D8D1CC;
+    @define-color selection      #33ffe6;
     @define-color black          #0c0b0d;
     @define-color red            #ff4a78;
     @define-color green          #f2f2ea;
@@ -8,7 +9,7 @@
     @define-color magenta        #bd5cff;
     @define-color cyan           #53b1ca;
     @define-color white          #D8D1CC;
-    @define-color bright_black   #7a777d;
+    @define-color bright_black   #7d8581;
     @define-color bright_red     #ff6f93;
     @define-color bright_green   #fefef6;
     @define-color bright_yellow  #A375FF;
@@ -62,7 +63,7 @@
     @define-color theme_text_color @foreground;
     @define-color theme_bg_color @background;
     @define-color theme_base_color @black;
-    @define-color theme_selected_bg_color @blue;
+    @define-color theme_selected_bg_color @selection;
     @define-color theme_selected_fg_color @background;
     @define-color insensitive_bg_color @background;
     @define-color insensitive_fg_color @bright_black;
@@ -71,7 +72,7 @@
     @define-color theme_unfocused_text_color @foreground;
     @define-color theme_unfocused_bg_color @background;
     @define-color theme_unfocused_base_color @black;
-    @define-color theme_unfocused_selected_bg_color @blue;
+    @define-color theme_unfocused_selected_bg_color @selection;
     @define-color theme_unfocused_selected_fg_color @background;
     @define-color unfocused_insensitive_color @bright_black;
     @define-color unfocused_borders alpha(@foreground, 0.1);
