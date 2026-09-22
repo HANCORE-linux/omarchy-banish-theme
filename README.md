@@ -20,23 +20,24 @@ omarchy theme set banish
 ## Enable shell plugins
 
 The custom menu, OSD and notification plugins are optional. After installing the
-theme, link them once:
+theme, first link them (works from Bash, Zsh and Fish):
 
 ```bash
-mkdir -p ~/.config/omarchy/plugins
-for plugin in banish.menu banish.osd banish.notifications; do
-  ln -sfnT "$HOME/.config/omarchy/themes/banish/shell-plugins/$plugin" \
-    "$HOME/.config/omarchy/plugins/$plugin"
-done
-omarchy-shell shell rescanPlugins
+mkdir -p ~/.config/omarchy/plugins &&
+ln -sfnT ~/.config/omarchy/themes/banish/shell-plugins/banish.menu ~/.config/omarchy/plugins/banish.menu &&
+ln -sfnT ~/.config/omarchy/themes/banish/shell-plugins/banish.osd ~/.config/omarchy/plugins/banish.osd &&
+ln -sfnT ~/.config/omarchy/themes/banish/shell-plugins/banish.notifications ~/.config/omarchy/plugins/banish.notifications &&
+omarchy-shell shell rescanPlugins &&
+echo "Plugins linked. Run the activation commands below."
 ```
 
-Then activate them to replace the built-in components:
+**Then activate them:** linking alone does not enable the plugins. Each enable
+command prints `Enabled banish.…` on success.
 
 ```bash
-omarchy plugin enable banish.menu
-omarchy plugin enable banish.osd
-omarchy plugin enable banish.notifications
+omarchy plugin enable banish.menu &&
+omarchy plugin enable banish.osd &&
+omarchy plugin enable banish.notifications &&
 omarchy restart shell
 ```
 
@@ -45,10 +46,9 @@ omarchy restart shell
 To restore Omarchy's built-in menu, OSD and notifications:
 
 ```bash
-for plugin in banish.menu banish.osd banish.notifications; do
-  omarchy plugin disable "$plugin" &&
-    omarchy plugin remove "$plugin" --yes
-done
+omarchy plugin disable banish.menu && omarchy plugin remove banish.menu --yes
+omarchy plugin disable banish.osd && omarchy plugin remove banish.osd --yes
+omarchy plugin disable banish.notifications && omarchy plugin remove banish.notifications --yes
 
 omarchy restart shell
 ```
