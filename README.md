@@ -17,7 +17,8 @@ ln -s ~/omarchy-banish-theme ~/.config/omarchy/themes/banish
 omarchy theme set banish
 ```
 
-## Enable shell plugins
+<details>
+<summary>Enable Shell Plugins</summary>
 
 The custom menu, OSD and notification plugins are optional. After installing the
 theme, first link them (works from Bash, Zsh and Fish):
@@ -41,7 +42,10 @@ omarchy plugin enable banish.notifications &&
 omarchy restart shell
 ```
 
-## Remove shell plugins
+</details>
+
+<details>
+<summary>Remove Shell Plugins</summary>
 
 To restore Omarchy's built-in menu, OSD and notifications:
 
@@ -55,7 +59,11 @@ omarchy restart shell
 
 For symlinked plugins, the files in the theme folder are kept.
 
+</details>
+
 <img width="2560" height="1440" alt="banish preview" src="preview.png" />
+
+<img width="2560" height="1440" alt="Banish desktop with menu, OSD and notifications" src="preview-shell.png" />
 
 #### Quickshell-Bar
 [LINK](https://github.com/HANCORE-linux/Shibumi-Shell)
