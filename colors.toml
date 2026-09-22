@@ -6,7 +6,7 @@ selection_background = "#33ffe6"
 selection_foreground = "#0c0b0d"
 muted = "#7d8581"
 
-hyprland_active_border = "rgba(e4e4e4b3)"
+hyprland_active_border = "rgba(8f57ffb3) rgba(8f57ffb3) rgba(8f57ffb3) rgba(e4e4e4b3) rgba(e4e4e4b3) rgba(e4e4e4b3) 270deg"
 hyprland_inactive_border = "rgba(2a252e99)"
 
 background = "#0c0b0d"

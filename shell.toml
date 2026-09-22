@@ -13,8 +13,9 @@ size-vertical    = 28
 
 [hyprland]
 active-border-width = 1
-active-border            = "rgba(e4e4e4b3)"
+active-border            = "rgba(8f57ffb3) rgba(8f57ffb3) rgba(8f57ffb3) rgba(e4e4e4b3) rgba(e4e4e4b3) rgba(e4e4e4b3) 270deg"
 active-border-foreground = "rgba(e4e4e4b3)"
+soft-border = "rgba(8f57ffb3) rgba(e4e4e4b3) 270deg"
 
 [controls]
 
@@ -69,11 +70,12 @@ border           = "hyprland.active-border-foreground"
 border-alpha     = 1.0
 
 [notifications]
+floating-shadow = true
 border-width = 1
 background       = "#0c0b0d"
 background-alpha = 1.0
 text             = "#e4e2e6"
-border           = "hyprland.active-border"
+border           = "hyprland.soft-border"
 border-alpha     = 1.0
 countdown        = "#ff2fb3"
 
@@ -93,19 +95,27 @@ selected-border           = "hyprland.active-border-foreground"
 selected-border-alpha     = 0.25
 
 [menu]
+compact = true
+width = 295
+border-radius = 4
+extra-bottom-padding = 4
+floating-shadow = true
+shadow-opacity = 0.4
+shadow-spread = 0
 border-width = 1
 background                = "#0c0b0d"
 background-alpha          = 1.0
 text                      = "#e4e2e6"
-border                    = "hyprland.active-border-foreground"
+border                    = "hyprland.active-border"
 border-alpha              = 1.0
 scrim                     = "#0c0b0d"
-scrim-alpha               = 0.5
-selected-background       = "#e4e2e6"
-selected-background-alpha = 0.08
+scrim-alpha               = 0.0
+selected-background       = "#ff2fb3"
+selected-background-alpha = 0.0
 selected-text             = "#ff2fb3"
 selected-border           = "hyprland.active-border-foreground"
-selected-border-alpha     = 0.25
+selected-border-alpha     = 0.0
+selected-border-width     = 0
 
 [polkit]
 border-width = 1
@@ -123,12 +133,12 @@ accent           = "#ff2fb3"
 [lock]
 border-width = 1
 background       = "#0c0b0d"
-background-alpha = 0.8
+background-alpha = 1.0
 text             = "#e4e2e6"
 placeholder      = "#9b999c"
 text-error       = "#ff4a78"
-border           = "hyprland.active-border"
-border-active    = "hyprland.active-border"
+border           = "hyprland.soft-border"
+border-active    = "hyprland.soft-border"
 border-error     = "#ff4a78"
 border-alpha     = 1.0
 selection        = "#ff2fb3"
@@ -142,3 +152,15 @@ selected-border         = "#ff2fb3"
 selected-border-alpha   = 1.0
 unselected-border       = "#e4e2e6"
 unselected-border-alpha = 0.28
+
+# Shared by the local menu, notification and OSD plugins.
+[floating-shadow]
+blur = 18
+opacity = 0.55
+offset-y = 2
+
+[osd]
+floating-shadow = true
+border-width = 1
+border = "hyprland.soft-border"
+border-alpha = 1.0
