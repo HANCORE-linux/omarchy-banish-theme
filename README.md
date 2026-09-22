@@ -26,15 +26,6 @@ The custom menu, OSD and notification plugins are optional. The menu replaces
 the built-in overlay; it does not add a bar widget. Install the plugins as real
 folders so Shibumi's plugin catalog can read them.
 
-**Previously used the symlink commands?** Remove those three links first. This
-keeps the original files in the theme folder:
-
-```bash
-unlink ~/.config/omarchy/plugins/banish.menu
-unlink ~/.config/omarchy/plugins/banish.osd
-unlink ~/.config/omarchy/plugins/banish.notifications
-```
-
 Copy the plugins (works from Bash, Zsh and Fish):
 
 ```bash
