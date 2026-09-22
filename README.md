@@ -9,30 +9,42 @@ omarchy-theme-install https://github.com/HANCORE-linux/omarchy-banish-theme.git
 ```
 
 Omarchy skips every `.lua` in a theme installed from a repo, so this way leaves out
-`gum_env.lua` and `hyprland.lua`. Clone and link instead to get the whole theme:
+`gum_env.lua` and `hyprland.lua`. Clone into `~/custom-themes/banish` and link
+instead to get the whole theme:
 
 ```bash
-git clone https://github.com/HANCORE-linux/omarchy-banish-theme.git ~/omarchy-banish-theme
-ln -s ~/omarchy-banish-theme ~/.config/omarchy/themes/banish
+mkdir -p ~/custom-themes ~/.config/omarchy/themes &&
+git clone https://github.com/HANCORE-linux/omarchy-banish-theme.git ~/custom-themes/banish &&
+ln -sT ~/custom-themes/banish ~/.config/omarchy/themes/banish &&
 omarchy theme set banish
 ```
 
 <details>
 <summary>Enable Shell Plugins</summary>
 
-The custom menu, OSD and notification plugins are optional. After installing the
-theme, first link them (works from Bash, Zsh and Fish):
+The custom menu, OSD and notification plugins are optional. The menu replaces
+the built-in overlay; it does not add a bar widget. Install the plugins as real
+folders so Shibumi's plugin catalog can read them.
+
+**Previously used the symlink commands?** Remove those three links first. This
+keeps the original files in the theme folder:
+
+```bash
+unlink ~/.config/omarchy/plugins/banish.menu
+unlink ~/.config/omarchy/plugins/banish.osd
+unlink ~/.config/omarchy/plugins/banish.notifications
+```
+
+Copy the plugins (works from Bash, Zsh and Fish):
 
 ```bash
 mkdir -p ~/.config/omarchy/plugins &&
-ln -sfnT ~/.config/omarchy/themes/banish/shell-plugins/banish.menu ~/.config/omarchy/plugins/banish.menu &&
-ln -sfnT ~/.config/omarchy/themes/banish/shell-plugins/banish.osd ~/.config/omarchy/plugins/banish.osd &&
-ln -sfnT ~/.config/omarchy/themes/banish/shell-plugins/banish.notifications ~/.config/omarchy/plugins/banish.notifications &&
+cp -a ~/.config/omarchy/themes/banish/shell-plugins/. ~/.config/omarchy/plugins/ &&
 omarchy-shell shell rescanPlugins &&
-echo "Plugins linked. Run the activation commands below."
+echo "Plugins copied. Run the activation commands below."
 ```
 
-**Then activate them:** linking alone does not enable the plugins. Each enable
+**Then activate them:** copying alone does not enable the plugins. Each enable
 command prints `Enabled banish.…` on success.
 
 ```bash
@@ -41,6 +53,8 @@ omarchy plugin enable banish.osd &&
 omarchy plugin enable banish.notifications &&
 omarchy restart shell
 ```
+
+After a theme update, copy the plugins again and run `omarchy restart shell`.
 
 </details>
 
@@ -57,7 +71,7 @@ omarchy plugin disable banish.notifications && omarchy plugin remove banish.noti
 omarchy restart shell
 ```
 
-For symlinked plugins, the files in the theme folder are kept.
+The original files in the theme folder are kept.
 
 </details>
 

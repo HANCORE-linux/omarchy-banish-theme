@@ -2,23 +2,15 @@
   "schemaVersion": 1,
   "id": "banish.menu",
   "name": "Omarchy menu",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Omarchy",
   "description": "Quickshell-powered Omarchy command menu",
   "kinds": [
-    "menu",
-    "bar-widget"
+    "menu"
   ],
   "keepLoaded": true,
   "entryPoints": {
-    "menu": "Menu.qml",
-    "barWidget": "BarWidget.qml"
-  },
-  "barWidget": {
-    "displayName": "Omarchy menu",
-    "description": "Launches the Omarchy menu",
-    "category": "Compositor",
-    "allowMultiple": false
+    "menu": "Menu.qml"
   },
   "omarchy": {
     "clonedFrom": "omarchy.menu"
